@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Task Mangement Platform</title>
+
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header class="page-header">Task Management Platform</header>
+
+	<main>
+
+		<section class="form-section">
+			<form onsubmit="handleAdd()" method="get">
+				<input id="title" type="text" required class="input-text" placeholder="Title" />
+				<input id="description" type="text" required class="input-text" placeholder="Description" />
+				<button type="submit" class="btn-add">Add</button>
+			</form>
+		</section>
+
+		<section>
+			<div class="lists">
+
+				<div class="list" id="todo">
+					<h2 class="list-header">To Do</h2>
+				</div>
+
+				<div class="list" id="inprogress">
+					<h2 class="list-header">In Progress</h2>
+				</div>
+
+				<div class="list" id="done">
+					<h2 class="list-header">Done</h2>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

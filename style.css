@@ -1,0 +1,148 @@
+:root {
+  --primary-color: rgb(62, 100, 255);
+  --complete-color: #27aa80;
+  --text-color: #172b4d;
+  --disabled-color: #fad6d6;
+  --background-color: #f5eaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(0, 73, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 73, 191, 1) 0%,
+    rgba(190, 190, 255, 1) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: var(--text-color);
+  font-family: sans-serif;
+  margin: 0;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-header {
+  background-color: #054f7c;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 16px;
+  text-align: center;
+}
+
+/* List Section */
+.lists {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.list {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  margin: 15px;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+  min-height: 350px;
+  max-width: 350px;
+  min-width: 250px;
+  width: 100%;
+  background-color: var(--background-color) !important;
+}
+
+.list-header {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.list-item {
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  z-index: 1;
+  background-color: white;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.list-item-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.list-item-desc {
+  color: gray;
+  padding: 4px 0px;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0px 24px 0px;
+}
+
+.input-text {
+  height: 50px;
+  border: none;
+  padding: 0px 16px;
+  border-radius: 8px;
+  margin: 4px;
+  outline: none;
+  font-size: 14px;
+  min-width: 300px;
+}
+
+.btn-add {
+  padding: 12px 28px;
+  color: white;
+  background: var(--secondary-color);
+  border: 1px solid white;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 4px;
+  outline: none;
+}
+
+.btn-add:hover {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+@media (max-width: 840px) {
+  .lists {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section {
+    flex-direction: column;
+  }
+
+  .input-text {
+    width: 100%;
+    min-width: 150px;
+  }
+}
